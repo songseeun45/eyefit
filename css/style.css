@@ -1,0 +1,1035 @@
+/* 기본 설정 */
+* {
+    padding: 0;
+    margin: 0;
+     
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+@import url('https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.1/packages/wanted-sans/fonts/webfonts/variable/split/WantedSansVariable.min.css');
+
+img {
+    display: block;
+}
+
+body {
+    color: #414141;
+    font-family: 'Wanted Sans Variable', 'Wanted Sans', sans-serif;
+    
+}
+
+/* 기본 마우스 숨기기 */
+body,
+a,
+button{
+    cursor: none;
+}
+
+
+/* 커스텀 커서 */
+.custom_cursor{
+    width: 25px;
+    height: 25px;
+
+    border: 2.5px solid #fff;
+    border-radius: 50%;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    pointer-events: none;
+    z-index: 99999;
+
+    transform: translate(-50%, -50%);
+}
+
+
+/* 가운데 점 */
+.custom_cursor::after{
+    content: "";
+
+    width: 15px;
+    height: 15px;
+
+    background-color: #84ABD6;
+    border-radius: 50%;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+
+h1{
+    font-weight:600;
+}
+
+#wrap {
+    width: 100%;
+}
+
+#top {
+    background-color: #84ABD6;
+    padding: 5px 0;
+}
+
+#top p {
+    margin: 0 auto;
+    width: 1320px;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+}
+
+#header {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.inner_header {
+    width: 1320px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+}
+
+.mobile_menu {
+    display: none;
+}
+
+.logo {
+    position: absolute;
+    left: 0;
+}
+
+.logo img {
+    width: 80px;
+}
+
+.gnb {
+    display: flex;
+    gap: 55px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+
+}
+
+.gnb li a {
+    font-size: 15px;
+    color: #fff;
+    display: block;
+}
+
+.gnb li a:hover {
+    color: #84ABD6;
+    transform: scale(0.9);
+}
+
+.util {
+    display: flex;
+    gap: 22px;
+    position: absolute;
+    right: 0;
+}
+
+.util img {
+    width: 20px;
+}
+
+#banner{
+    position: relative;
+    width: 100%;
+    height: 900px;
+    overflow: hidden;
+}
+
+#banner video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* =========================
+   모바일 HEADER
+========================= */
+@media (max-width: 600px) {
+     #top {
+        padding: 4px 0;
+    }
+
+    #top p {
+        width: 100%;
+        padding: 0 15px;
+        box-sizing: border-box;
+        font-size: 10px;
+        text-align: center;
+    }
+
+    #header {
+        top: 25px;
+        width: 100%;
+    }
+
+    .inner_header {
+        width: 100%;
+        height: 50px;
+        padding: 0 16px;
+        box-sizing: border-box;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /* PC 메뉴 숨기기 */
+    .gnb {
+        display: none;
+    }
+
+    /* 햄버거 메뉴 보이기 */
+    .mobile_menu {
+        display: block;
+    }
+
+    .mobile_menu img {
+        width: 18px;
+    }
+
+    /* 로고 정확히 가운데 */
+    .logo {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .logo img {
+        width: 70px;
+    }
+
+    /* 오른쪽 아이콘 */
+    .util {
+        right: 16px;
+        gap: 8px;
+    }
+
+    .util img {
+        width: 17px;
+    }
+}
+
+
+
+/* 베스트 셀러 */
+#section1 {
+    width: 100%;
+    padding: 120px 0;
+}
+
+#shop {
+    width: 1320px;
+    margin: 0 auto;
+
+
+}
+
+#shop>h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 3px;
+    
+}
+
+#shop>p {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 50px;
+}
+
+/* 상품 3개 정렬 */
+.best_wrap{
+    position: relative;
+    display: block;
+    overflow: visible;
+}
+/* 로고 */
+.product_card .logo_G{
+    position: absolute;
+    width: 115px;
+    left: 25px;
+    top: 25px;
+    z-index: 5;
+}
+
+/* 렌즈 */
+.product_card .lens_G{
+    position: absolute;
+    width: 160px;
+    right: -7px;
+    bottom: -7px;
+    z-index: 5;
+}
+
+/* 브라운 로고 */
+.product_card .logo_B{
+    position: absolute;
+    width: 120px;
+    left: 25px;
+    top: 25px;
+    z-index: 5;
+    pointer-events: none;
+}
+
+/* 브라운 렌즈 */
+.product_card .lens_B{
+    position: absolute;
+    width: 160px;
+    right: -7px;
+    bottom: -7px;
+    z-index: 5;
+    pointer-events: none;
+}
+
+/* 베얼리 로고 */
+.product_card .logo_BB{
+    position: absolute;
+    width: 115px;
+    height: auto;
+    left: 25px;
+    top: 25px;
+    z-index: 5;
+}
+
+/* 베얼리 렌즈 */
+.product_card .lens_BB{
+ position: absolute;
+    width: 160px;
+    right: -7px;
+    bottom: -7px;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.product_card .logo_G,
+.product_card .logo_B,
+.product_card .logo_BB,
+.product_card .lens_G,
+.product_card .lens_B,
+.product_card .lens_BB{
+    height: auto;
+    border-radius: 0;
+}
+
+
+.product_card {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.product_card img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+
+/* 상품 설명 */
+.product_card h3 {
+    margin-left: 5px;
+    margin-top: 12px;
+    font-size: 20px;
+    font-weight:700;
+}
+
+.product_info {
+    margin-left: 5px;
+    margin-top: 5px;
+    font-weight: 100;
+    font-size: 12px;
+}
+
+.price {
+    font-weight: 500;
+    margin-left: 5px;
+    margin-top: 10px;
+    font-size: 22px;
+}
+
+@keyframes textRotate{
+    from{
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+#section2 {
+    position: relative;
+    width: 100%;
+    height: 920px;
+    margin: 80px 0 120px;
+    background-color: #84ABD6;
+}
+.circle_overlap{
+    width: 300px;
+    height:250px;
+
+    position: absolute;
+    z-index: 1;
+    right: 190px;
+    top: -140px;
+}
+
+.circle_overlap img{
+    width: 120%;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    animation: circleRotate 13s linear infinite;
+}
+
+.circle_blue{
+    clip-path: inset(0 0 50% 0);
+}
+
+.circle_white{
+    clip-path: inset(50% 0 0 0);
+}
+
+@keyframes circleRotate{
+    from{
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.Softly_inner {
+    width: 1400px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.softly_left {
+    color: #fff;
+    /* margin-top: 120px; */
+    /* padding-left: 300px; */
+}
+
+.softly_left h2 {
+    margin-bottom: 70px;
+    font-size: 65px;
+}
+
+.softly_text {
+    margin-bottom: 120px;
+    font-size: 30px;
+}
+
+/* 렌즈 탭 */
+.tab {
+    box-sizing: border-box;
+    display: flex;
+    gap: 35px;
+}
+
+.tab li {
+    text-align: center;
+    color: #fff;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: .3s;
+    transition: 0.35s;
+
+}
+
+.tab li.on {
+    opacity: 1;
+    transform: translateY(-10px);
+}
+.tab li.on img{
+  text-shadow: 0 0 15px #FFFFFF;
+  -moz-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.tab li img {
+    width: 150px;
+    display: block;
+}
+
+.tab li p {
+    margin-top: 12px;
+    font-size: 20px;
+}
+
+/* 카드 탭*/
+/* 오른쪽 카드 슬라이더 */
+.card_slider {
+     position: relative;
+    z-index: 2;
+    width: 523px;
+    overflow: hidden;
+}
+/* 카드 3장을 가로로 배치 */
+.card_list {
+    display: flex;
+    transition: transform 0.6s ease;
+}
+
+.card_list li {
+    width: 523px;
+    flex-shrink: 0;
+}
+
+.card_list img {
+    width: 523px;
+    display: block;
+    border-radius: 15px;
+}
+/* 브랜드 스토리 */
+#section3 {
+    width: 100%;
+    padding: 120px 0;
+    margin-bottom: 120px;
+    background-image: url(../images/brand_story/background.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.story_inner {
+    width: 1320px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 130px;
+}
+
+.story_left {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+}
+
+.story_left p {
+    margin-right: 24px;
+    color: #83ade0;
+    font-size: 30px;
+    writing-mode: vertical-rl;
+}
+
+.story_model img {
+    width: 100%;
+    display: block;
+}
+
+.story_right {
+    margin-top: 50px;
+}
+
+.story_text {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.story_text h2 {
+    margin-bottom: 40px;
+    color: #83ade0;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.story_text p {
+    font-weight: 200;
+    margin-bottom: 28px;
+    font-size: 25px;
+    line-height: 1.5;
+}
+
+.story_text p strong{
+    font-weight:600;
+}
+.story_product img {
+    width: 100%;
+    display: block;
+}
+/* 왼쪽 */
+.scroll_down{
+    opacity: 0;
+    transform: translateY(-40px);
+    transition: 2s;
+}
+
+/* 오른쪽 */
+.scroll_up{
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 2s;
+}
+
+/* 원래 자리로 */
+.scroll_down.on,
+.scroll_up.on{
+    opacity: 1;
+    transform: translateY(0);
+}
+/* 오른쪽만 늦게 시작 */
+.story_right.scroll_up{
+    transition-delay: 0.5s;
+}
+
+/* 흘러가는 로고 */
+#logo_flow {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 30px;
+}
+
+.logo_track {
+    width: 3000px;
+    /*ul길이의 두배!*/
+    display: flex;
+    animation: rotate 15s linear infinite;
+}
+
+.logo_track ul {
+    display: flex;
+    width: 1800px;
+    /*li크기를 전부합한것보다 더 여유있게.*/
+    justify-content: space-around;
+}
+
+.logo_track ul li {
+    width: 300px;
+}
+
+
+@keyframes rotate {
+    0% {
+        margin-left: 0;
+    }
+
+    100% {
+        margin-left: -1800px;
+    }
+}
+
+
+#section4 {
+    width: 100%;
+    padding: 150px 0;
+}
+
+.news_inner {
+    width: 1320px;
+    height: 516px;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+.news_inner h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 3px;
+}
+
+.news_inner>p {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.news_list {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    text-align: center;
+}
+
+.news_list li>a {
+    display: block;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.news_list img {
+    width: 100%;
+    display: block;
+    transition: 0.5s;
+}
+
+.news_list li>a:hover img {
+    transform: scale(1.08);
+}
+
+/* fAQ */
+#section5 {
+    width: 100%;
+    padding: 100px 0;
+    margin-bottom: 70px;
+}
+
+.faq_inner {
+    width: 1320px;
+    margin: 0 auto;
+}
+
+
+.faq_inner h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 3px;
+}
+
+.faq_sub {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 50px;
+}
+
+.faq_list {
+    width: 100%;
+    border-top: 1px solid #ccc;
+}
+
+.faq_list>li {
+    border-bottom: 1px solid #ccc;
+}
+
+.question {
+    height: 100px;
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+}
+
+.question .q {
+    font-weight: bold;
+    font-size: 30px;
+    color: #84ABD6;
+}
+
+.question p {
+    display: block;
+    margin-left: 60px;
+    font-size: 25px;
+}
+
+.answer {
+    display: none;
+    padding: 25px 75px;
+    border-top: 1px solid #ccc;
+    background-color: #fafafa;
+}
+
+.answer p {
+    padding: 0 25px;
+    font-size: 23px;
+    color: #555;
+    text-align: left;
+    line-height: 1.7;
+}
+
+.icon {
+    width: 20px;
+    margin-left: auto;
+
+}
+
+.turn .icon img {
+    transform: rotate(180deg);
+}
+
+.icon img {
+    width: 100%;
+    transition: transform 0.5s;
+}
+
+#section6 {
+    background-image: url(../images/banner_fixed/fixed\ banner.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#section6 h1 {
+    font-weight: 450;
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* Instagram */
+#section7 {
+    width: 100%;
+    padding: 120px 0;
+    margin-bottom: 70px;
+}
+
+#section7 h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 80px;
+}
+
+.insta_inner {
+    width: 1320px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.insta_track {
+    width: max-content;
+    display: flex;
+    animation: instaFlow 20s linear infinite;
+}
+.insta_inner:hover .insta_track {
+    animation-play-state: paused;
+}
+
+.insta_group {
+    display: flex;
+    gap: 15px;
+    padding-right: 15px;
+}
+
+.insta_group li {
+    flex-shrink: 0;
+}
+.insta_group li img{
+    border-radius: 10px;
+}
+
+.insta_small {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 500px;
+}
+
+.insta_small a {
+    display: block;
+}
+.insta_video{
+    width: 364px;
+    height: 245px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.insta_video video{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    display: block;
+}
+
+.insta_model_video{
+    width: 600px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.insta_model_video video{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+@keyframes instaFlow {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* footer */
+/* footer */
+
+#footer{
+    width:100%;
+    border-top:1px solid #ddd;
+    border-bottom:1px solid #ddd;
+}
+
+.footer_inner{
+    width:1320px;
+    height:340px;
+    margin:0 auto;
+
+    display:flex;
+}
+
+
+/* 왼쪽 영역 */
+
+.footer_left{
+    width:60%;
+    padding:40px 45px 25px;
+
+    box-sizing:border-box;
+    position:relative;
+}
+
+.footer_top_left{
+    display:flex;
+    align-items:flex-start;
+}
+
+.footer_logo{
+    width:180px;
+}
+
+.footer_logo img{
+    width:80px;
+}
+
+.company_info{
+    margin-left:30px;
+}
+
+.company_info p{
+    font-size:13px;
+    line-height:1.8;
+    color:#777;
+}
+
+
+/* 왼쪽 아래 */
+
+.footer_left_bottom{
+    position:absolute;
+    left:45px;
+    right:45px;
+    bottom:25px;
+
+    display:flex;
+    align-items:center;
+}
+
+.footer_left_bottom span{
+    font-size:12px;
+    color:#84ABD6;
+}
+
+.footer_policy{
+    display:flex;
+    gap:70px;
+}
+
+.footer_policy a{
+    font-size:13px;
+    color:#555;
+}
+
+
+/* 오른쪽 */
+
+.footer_right{
+    width:40%;
+    padding:40px 30px 25px;
+
+    box-sizing:border-box;
+    border-left:1px solid #ddd;
+
+    position:relative;
+}
+
+.footer_top_right{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+}
+
+.customer h3{
+    font-size:16px;
+    margin-bottom:15px;
+}
+
+.customer .phone{
+    font-size:22px;
+    font-weight:600;
+    margin-bottom:15px;
+}
+
+.customer p{
+    font-size:13px;
+    line-height:1.8;
+    color:#777;
+}
+
+/* 오른쪽 아래 */
+
+.footer_right_bottom{
+    position:absolute;
+    left:30px;
+    right:30px;
+    bottom:25px;
+
+    display:flex;
+    justify-content:space-between;
+}
+
+.footer_right_bottom a{
+    font-size:13px;
+    color:#555;
+}
+
+#top_btn{
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    z-index: 1000;
+    cursor: pointer;
+
+}
+
+#top_btn img{
+    width: 60px;
+    display: block;
+}
