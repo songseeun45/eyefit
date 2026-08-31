@@ -21,6 +21,7 @@ img {
 }
 
 body {
+    min-width: 1320px;
     color: #414141;
     font-family: 'Wanted Sans Variable', 'Wanted Sans', sans-serif;
     
