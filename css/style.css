@@ -21,7 +21,6 @@ img {
 }
 
 body {
-    min-width: 1320px;
     color: #414141;
     font-family: 'Wanted Sans Variable', 'Wanted Sans', sans-serif;
     
@@ -77,7 +76,8 @@ h1{
 }
 
 #wrap {
-    width: 100%;
+     min-width: 1400px;
+    overflow: hidden;
 }
 
 #top {
