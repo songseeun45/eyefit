@@ -170,72 +170,7 @@ h1{
 }
 
 
-/* =========================
-   모바일 HEADER
-========================= */
-@media (max-width: 600px) {
-     #top {
-        padding: 4px 0;
-    }
 
-    #top p {
-        width: 100%;
-        padding: 0 15px;
-        box-sizing: border-box;
-        font-size: 10px;
-        text-align: center;
-    }
-
-    #header {
-        top: 25px;
-        width: 100%;
-    }
-
-    .inner_header {
-        width: 100%;
-        height: 50px;
-        padding: 0 16px;
-        box-sizing: border-box;
-
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    /* PC 메뉴 숨기기 */
-    .gnb {
-        display: none;
-    }
-
-    /* 햄버거 메뉴 보이기 */
-    .mobile_menu {
-        display: block;
-    }
-
-    .mobile_menu img {
-        width: 18px;
-    }
-
-    /* 로고 정확히 가운데 */
-    .logo {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .logo img {
-        width: 70px;
-    }
-
-    /* 오른쪽 아이콘 */
-    .util {
-        right: 16px;
-        gap: 8px;
-    }
-
-    .util img {
-        width: 17px;
-    }
-}
 
 
 
